@@ -15,11 +15,14 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub CommandButton1_Click()
+
     form_rj.Hide
     form_macros.Show
     Sheets("rj-menu").Visible = False
     Sheets("rj-controle").Visible = False
     Sheets("rj-capa-corte").Visible = False
+    Application.Visible = False
+    
 End Sub
 
 Private Sub CommandButton10_Click()

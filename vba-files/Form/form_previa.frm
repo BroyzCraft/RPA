@@ -23,6 +23,7 @@ Private Sub CommandButton1_Click()
     Sheets("previa-retira").Visible = False
     Sheets("previa-loja").Visible = False
     Sheets("previa-rj").Visible = False
+    Application.Visible = False
 
 End Sub
 

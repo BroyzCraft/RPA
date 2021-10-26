@@ -23,25 +23,32 @@ Private Sub CommandButton1_Click()
     Sheets("otif-resumo").Visible = False
     Sheets("otif-consolidado").Visible = False
     Sheets("otif-filhos").Visible = False
+    Application.Visible = False
     
 End Sub
 
 Private Sub CommandButton10_Click()
     
-    ActiveWorkbook.Save
     Sheets("otif-dados").Visible = True
     Sheets("otif-menu").Visible = True
     Sheets("otif-resumo").Visible = True
     Sheets("otif-consolidado").Visible = True
     Sheets("otif-filhos").Visible = True
     
-    Worksheets(Array("otif-resumo", "otif-consolidado", "otif-filhos")).Copy
-    With ActiveWorkbook
-         .SaveAs Filename:=Environ("USERPROFILE") & "\Desktop\OTIF.xlsx", FileFormat:=xlOpenXMLWorkbook
-         .Close SaveChanges:=True
-    End With
+    'Worksheets(Array("otif-resumo", "otif-consolidado", "otif-filhos")).Copy
+    'With ActiveWorkbook
+    '     .SaveAs Filename:=Environ("USERPROFILE") & "\Desktop\OTIF.xlsx", FileFormat:=xlOpenXMLWorkbook
+    '     .Close SaveChanges:=True
+    'End With
     
-    gerarBackup
+    otif.gerarBackup
+    Shell "C:\WINDOWS\explorer.exe """ & "\\Ecfs1\leo\Logistica\Transporte\1_TRANSPORTES\Controle de Diario\FECHAMENTO GERAL\FECHAMENTOS 2021\Fechamento On time + In Full\" & "", vbNormalFocus
+    
+End Sub
+
+Private Sub CommandButton12_Click()
+    
+    otif.coletarInformacoes
     
 End Sub
 

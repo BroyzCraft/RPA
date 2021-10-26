@@ -22,7 +22,7 @@ Sub organizar()
         Range("A1").AutoFilter
     End If
     Cells.Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     
     'coleta os dados novos
     Windows(dadosNome).Activate
@@ -35,7 +35,7 @@ Sub organizar()
     
     'Realiza as formatações.
     Range("B:D,F:F,J:AH,AJ:AJ").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Range("A1").Select
     Selection.CurrentRegion.Select
     ActiveSheet.ListObjects.Add(xlSrcRange, Range("$A$1:$F$500"), , xlYes).Name = _

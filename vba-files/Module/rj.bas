@@ -108,7 +108,6 @@ Sub imprimirControle()
     
     gerarBackup
     Sheets("rj-controle").Select
-    ActiveWorkbook.Save
     
 End Sub
 

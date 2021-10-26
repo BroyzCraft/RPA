@@ -22,7 +22,7 @@ Sub imprimir()
         Range("A1").AutoFilter
     End If
     Cells.Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     
     'coleta os dados novos
     Windows(dadosNome).Activate
@@ -35,13 +35,13 @@ Sub imprimir()
     
     'Realiza as formatações.
     Range("C:C,D:D,F:F").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Columns("G:AE").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Columns("H:J").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Columns("E").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Range("F7").Select
     Selection.CurrentRegion.Select
     Application.CutCopyMode = False

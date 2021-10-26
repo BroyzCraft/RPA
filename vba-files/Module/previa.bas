@@ -270,11 +270,11 @@ Sub AjustaDados()
         .Refresh BackgroundQuery:=False
     End With
     Columns("A:A").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Rows("1:3").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Rows("2:2").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Range("A1").Select
     
     'retira
@@ -312,11 +312,11 @@ Sub AjustaDados()
         .Refresh BackgroundQuery:=False
     End With
     Columns("A:A").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Rows("1:3").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Rows("2:2").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Range("A1").Select
     
     'RJ
@@ -355,11 +355,11 @@ Sub AjustaDados()
         .Refresh BackgroundQuery:=False
     End With
     Columns("A:A").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Rows("1:3").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Rows("2:2").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Range("A1").Select
     
     'lj
@@ -398,11 +398,11 @@ Sub AjustaDados()
         .Refresh BackgroundQuery:=False
     End With
     Columns("A:A").Select
-    Selection.Delete Shift:=xlToLeft
+    Selection.Delete shift:=xlToLeft
     Rows("1:3").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Rows("2:2").Select
-    Selection.Delete Shift:=xlUp
+    Selection.Delete shift:=xlUp
     Range("A1").Select
         
     'extrai os dados

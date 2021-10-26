@@ -53,7 +53,7 @@ Sub gerarBackup()
     
     Dim plan As String
     Dim macro As String
-    plan = "10. Fechamento diario - Outubro.xlsx"
+    plan = "10. Fechamento diario - Outubro + Filho.xlsx"
     macro = "RPAs - Bruno.xlsm"
     Workbooks.Open ("\\Ecfs1\leo\Logistica\Transporte\1_TRANSPORTES\Controle de Diario\FECHAMENTO GERAL\FECHAMENTOS 2021\Fechamento On time + In Full\" & plan)
     
@@ -82,5 +82,52 @@ Sub gerarBackup()
     ActiveSheet.Paste
     
     Workbooks(plan).Close (True)
+    
+End Sub
+
+Sub coletarInformacoes()
+    
+    Application.DisplayAlerts = False
+    
+    Dim plan As String
+    Dim macro As String
+    plan = "10. Fechamento diario - Outubro + Filho.xlsx"
+    macro = "RPAs - Bruno.xlsm"
+    Workbooks.Open ("\\Ecfs1\leo\Logistica\Transporte\1_TRANSPORTES\Controle de Diario\FECHAMENTO GERAL\FECHAMENTOS 2021\Fechamento On time + In Full\" & plan)
+    
+    Workbooks(plan).Activate
+    Sheets("otif-resumo").Select
+    Cells.Copy
+    Workbooks(macro).Activate
+    Sheets("otif-resumo").Select
+    Range("A1").Select
+    ActiveSheet.Paste
+    
+    Workbooks(plan).Activate
+    Sheets("otif-consolidado").Select
+    Cells.Copy
+    Workbooks(macro).Activate
+    Sheets("otif-consolidado").Select
+    Range("A1").Select
+    ActiveSheet.Paste
+    
+    Workbooks(plan).Activate
+    Sheets("otif-filhos").Select
+    Cells.Copy
+    Workbooks(macro).Activate
+    Sheets("otif-filhos").Select
+    Range("A1").Select
+    ActiveSheet.Paste
+    
+    Workbooks(plan).Close (True)
+    Sheets("otif-dados").Visible = False
+    Sheets("otif-resumo").Visible = False
+    Sheets("otif-consolidado").Visible = False
+    Sheets("otif-filhos").Visible = False
+    
+End Sub
+Sub teste()
+
+    Shell "C:\WINDOWS\explorer.exe """ & "\\Ecfs1\leo\Logistica\Transporte\1_TRANSPORTES\Controle de Diario\FECHAMENTO GERAL\FECHAMENTOS 2021\Fechamento On time + In Full\" & "", vbNormalFocus
     
 End Sub

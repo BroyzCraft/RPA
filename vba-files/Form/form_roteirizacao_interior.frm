@@ -19,7 +19,16 @@ Private Sub CommandButton1_Click()
     form_roteirizacao_interior.Hide
     form_macros.Show
     Sheets("interior_imprimir_cortes").Visible = False
-    Sheets("interior_imprimir_cortes").Visible = False
+    Sheets("interior_organizar_rotas").Visible = False
+    Sheets("interior_frota").Visible = False
+    Application.Visible = False
+    
+End Sub
+
+Private Sub CommandButton11_Click()
+    
+    Sheets("interior_frota").Visible = True
+    Sheets("interior_frota").Select
     
 End Sub
 
